@@ -98,10 +98,10 @@ function enqueue_header_homepage_script() {
 			#main {
 				opacity: 0;
 				transition: opacity 0.1s ease-in-out;
-
 			}
 			#main {
-				transition: padding-top 0.1s ease-in-out;
+				margin-top: 40px;
+				transition: margin-top 0.1s ease-in-out;
 			  }
 
 			#banner > :nth-child(1) img {

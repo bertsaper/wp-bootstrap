@@ -16,9 +16,9 @@ function updateNavbarClass() {
   var bannerHeight = banner.offsetHeight;
 
   if (scrollPosition > (bannerHeight / 3)) {
-    main.style.paddingTop = (bannerHeight / 3) + 'px'; 
+    main.style.marginTop = (bannerHeight + 40) + 'px'; 
   } else {
-    main.style.paddingTop = 0; 
+    main.style.marginTop = 40 + 'px';
   }
 
   if (scrollPosition > bannerHeight) {
@@ -36,6 +36,7 @@ function updateNavbarClass() {
 // Event listener for window load.
 window.addEventListener('load', function() {
   setInitialStyles();  // Set initial styles when the page has finished loading.
+  updateNavbarClass();
 });
 
 // Event listener for window scroll.
