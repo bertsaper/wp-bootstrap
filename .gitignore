@@ -1,8 +1,5 @@
 # .gitignore content
 
-# Ignore 2024 theme
-
-lmss_1-parent-child-03-30-2024.zip
 twentytwentyfour/
 lmss_1/node_modules/
 lmss_1-child/node_modules/
