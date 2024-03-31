@@ -1,0 +1,32 @@
+{
+	"name": "child-theme-for-themes-starter",
+	"version": "3.0.0",
+	"license": "GPL-2.0",
+	"description": "A WordPress Starter Theme built with Bootstrap 5.",
+	"homepage": "https://them.es",
+	"author": "them.es",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/them-es/themes-starter.git"
+	},
+	"scripts": {
+		"watch": "webpack serve && wp-scripts start",
+		"build": "wp-scripts build",
+		"compile-scss": "sass --style=compressed assets/main.scss:build/child-main.css"
+	},
+	"browserslist": [
+		"last 2 versions"
+	],
+	"dependencies": {
+		"@popperjs/core": "^2.11.8",
+		"bootstrap": "^5.3.1"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.19.0",
+		"path": "^0.12.7",
+		"sass": "^1.72.0",
+		"webpack": "^5.91.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-remove-empty-scripts": "^1.0.3"
+	}
+}
