@@ -90,7 +90,7 @@
 		</nav><!-- /#header -->
 	</header>
 
-	<main id="main" class="container">
+	<main id="main" class="container" style="margin-top: 40px">
 		<?php
 			// If Single or Archive (Category, Tag, Author or a Date based page).
 			if ( is_single() || is_archive() ) :
