@@ -101,7 +101,7 @@ function enqueue_header_homepage_script() {
 			}
 			#main {
 				margin-top: 40px;
-				transition: margin-top 0.1s ease-in-out;
+				transition: margin-top 0.3s ease-in-out;
 			  }
 
 			#banner > :nth-child(1) img {
