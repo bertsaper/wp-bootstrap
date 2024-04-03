@@ -89,7 +89,7 @@ function enqueue_header_homepage_script() {
     if (is_page_template('front-page.php')) {
 		// Initialize $custom_css to an empty string if it hasn't been set previously
 		$custom_css = isset($custom_css) ? $custom_css : '';
-        wp_enqueue_script('header-homepage-script', get_stylesheet_directory_uri() . '/assets/header-homepage-script.js', array(), '1.0.4', true);
+        wp_enqueue_script('header-homepage-script', get_stylesheet_directory_uri() . '/assets/header-homepage-script.js', array(), '1.0.7', false);
 
         // Add inline styles
         echo '<style>
