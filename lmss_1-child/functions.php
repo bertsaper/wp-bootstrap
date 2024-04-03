@@ -100,9 +100,8 @@ function enqueue_header_homepage_script() {
 				transition: opacity 0.1s ease-in-out;
 			}
 			#main {
-				margin-top: 40px;
-				transition: margin-top 0.15s ease-in-out;
-			  }
+				margin-top: 50px;
+			}
 
 			#banner > :nth-child(1) img {
 				max-width: 375px;
