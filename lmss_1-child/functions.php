@@ -222,18 +222,7 @@ add_action( 'enqueue_block_editor_assets', 'bootstrap_columns_enqueue_block_edit
 
 
 
-function my_theme_enqueue_block_editor_assets() {
-    wp_enqueue_script(
-        'my-custom-paragraph-block',
-        get_stylesheet_directory_uri() . '/assets/custom-column/index.js', 
-		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' )
-    );
-}
-add_action( 'enqueue_block_editor_assets', 'my_theme_enqueue_block_editor_assets' );
-
-
-
-
+// Function to enqueue block editor assets
 
 function mytheme_enqueue_block_editor_assets() {
     wp_enqueue_script(
@@ -241,6 +230,12 @@ function mytheme_enqueue_block_editor_assets() {
         get_stylesheet_directory_uri() . '/assets/custom-column/index.js', // Path to the block's JavaScript file.
         array( 'wp-blocks', 'wp-element', 'wp-block-editor' ),
         filemtime(get_stylesheet_directory() . '/assets/custom-column/index.js') // Version number.
+    );
+	wp_enqueue_style(
+        'mytheme-block-editor-styles',
+        get_stylesheet_directory_uri() . '/assets/custom-column/styles.css',
+        array(),
+        '1.0'
     );
 }
 

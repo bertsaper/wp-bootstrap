@@ -4,7 +4,7 @@ const { InnerBlocks, useBlockProps, InspectorControls } = wp.blockEditor;
 const { PanelBody, TextControl } = wp.components;
 
 registerBlockType('mytheme/featured-bootstrap-column', {
-    title: 'Featured Bootstrap Column',
+    title: 'Bootstrap Columns',
     icon: 'welcome-write-blog',
     category: 'layout',
     attributes: {
@@ -30,15 +30,16 @@ registerBlockType('mytheme/featured-bootstrap-column', {
         const TEMPLATE = [
             ['core/column', {}, [
                 [
-                    'my-theme/custom-paragraph'
+                    'my-theme/custom-paragraph', {placeholder: 'Column 1...'}
                 ],
             ]],
             ['core/column', {}, [
                 [
-                    'my-theme/custom-paragraph'
+                    'my-theme/custom-paragraph', {placeholder: 'Column 2...'}
                 ],
             ]],
         ];
+        
 
         const { clientId } = props;
         const innerBlockClientIds = wp.data.select('core/block-editor').getBlockOrder(clientId);
@@ -53,6 +54,10 @@ registerBlockType('mytheme/featured-bootstrap-column', {
         // Apply the classes dynamically.
         wp.data.dispatch('core/block-editor').updateBlockAttributes(colXClientId, { className: colXClass });
         wp.data.dispatch('core/block-editor').updateBlockAttributes(colYClientId, { className: colYClass });
+
+        // Add additional class for editing mode to style the block differently in the editor.
+        const blockProps = useBlockProps({ className: 'custom-editor-shading' });
+
 
         // Ensure InnerBlocks render normally
 
