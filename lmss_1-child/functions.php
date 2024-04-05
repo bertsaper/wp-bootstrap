@@ -207,8 +207,54 @@ add_action( 'wp_enqueue_scripts', 'enqueue_custom_styles' );
  * @return void
  */
 
+
+ function bootstrap_columns_enqueue_block_editor_assets() {
+    wp_enqueue_script(
+        'mytheme-featured-bootstrap-column-block',
+        get_stylesheet_directory_uri() . '/assets/bootstrap-columns.js',
+        array( 'wp-blocks', 'wp-element', 'wp-block-editor' ),
+        '1.0.0',
+        true
+    );
+}
+
+add_action( 'enqueue_block_editor_assets', 'bootstrap_columns_enqueue_block_editor_assets' );
+
+
+
+function my_theme_enqueue_block_editor_assets() {
+    wp_enqueue_script(
+        'my-custom-paragraph-block',
+        get_stylesheet_directory_uri() . '/assets/custom-column/index.js', 
+		array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' )
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'my_theme_enqueue_block_editor_assets' );
+
+
+
+
+
+function mytheme_enqueue_block_editor_assets() {
+    wp_enqueue_script(
+        'mytheme-my-custom-paragraph',
+        get_stylesheet_directory_uri() . '/assets/custom-column/index.js', // Path to the block's JavaScript file.
+        array( 'wp-blocks', 'wp-element', 'wp-block-editor' ),
+        filemtime(get_stylesheet_directory() . '/assets/custom-column/index.js') // Version number.
+    );
+}
+
+add_action('enqueue_block_editor_assets', 'mytheme_enqueue_block_editor_assets');
+
+
+
+
+
+
 // Errors
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+
 
