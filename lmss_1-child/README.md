@@ -1,6 +1,12 @@
 ## them.es Starter Theme
 **This a child theme** based on the Bootstrap 5.3 theme described below. All customization is done in this child folder. The CSS also is built from this child folder. Requires nodejs equal to or greater than 16. Once built, npm run compile-scss will build the CSS.
 
+## Bootstrap Columns Gutenberg Block
+
+While there are Bootstap Block plugins, they seemed to create a lot of extra code and it was best to make one just for this theme called Bootrap Columns. Like the menu, the block uses the md breakpoint (though it would be easy to open the lmss_1-child/assets/bootstrap-columns.js file and change it). 
+
+Use the Document Overview tab to arrange your content. All blocks are initialized with two paragraph blocks. You can use these or after adding other media, delete them. The block widths (1- 12) are entered in the right hand control panel.
+
 **them.es Starter** is a WordPress Starter Theme built with Bootstrap. Please note that the Source files are only recommended for WordPress Developers who are searching for a simple, solid, proved and tested **Bootstrap Starter Theme** to build upon. **_Don't_ expect a ready-to-use WordPress Theme!**
 
 If you want to see it in action or want to download a customized Theme for free, check out [https://them.es/starter-bootstrap](https://them.es/starter-bootstrap)
