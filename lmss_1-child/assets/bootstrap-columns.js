@@ -65,18 +65,22 @@ registerBlockType('mytheme/featured-bootstrap-column', {
             el(InspectorControls, null,
                 el(PanelBody, { title: 'Column Settings', initialOpen: true },
                     el(TextControl, {
-                        label: 'Column X Width',
+                        label: 'Column 1 Width',
                         value: attributes.colX,
                         onChange: function (newVal) {
                             setAttributes({ colX: newVal });
-                        }
+                        },
+                        help: 'Enter the Bootstrap Column width for first (left) column. Example: 6 or 8'
+
                     }),
                     el(TextControl, {
-                        label: 'Column Y Width',
+                        label: 'Column 2 Width',
                         value: attributes.colY,
                         onChange: function (newVal) {
                             setAttributes({ colY: newVal });
-                        }
+                        },
+                        help: 'Enter the Bootstrap Column width for second (right) column. Example: 6 or 4'
+
                     })
                 )
             ),
