@@ -1,0 +1,107 @@
+h1, h2, h3, h4 {
+    color: #58595B;
+}
+
+h1 {
+    font-weight: 600;
+	  font-size: 2rem;
+		margin-top: 1.5rem;
+    letter-spacing: -0.06rem;
+
+}
+
+h2 {
+    font-weight: 500;
+	  font-size: 1.67rem;
+		margin-top: 1.25rem;
+    letter-spacing: -0.05rem;	
+}
+
+h1, h2 {
+	  margin-bottom: 1.25rem;
+}
+
+h3 {
+	  font-weight: 400;
+	  font-size: 1.33rem;
+    letter-spacing: -0.04rem;	
+}
+
+
+h4 {
+    font-weight: 300;
+	  font-size: 1.5rem;
+}
+
+p, li {
+    font-weight: 300;
+	  font-size: 1.15rem;
+}
+
+
+#banner h2 {
+    font-weight: 300;
+}
+
+
+.wp-block-quote {
+	border-color: #A04000;
+	padding: 0 30px;
+	margin: 0 50px;
+}
+
+#banner img {
+	padding-bottom: 0;
+}
+
+#banner .wp-block-image {
+	margin:25px;
+}
+
+.navbar-brand img {
+    height: 70px;
+}
+
+#footer {
+		background-color: #A04000;
+    color: #FFF;
+	  border-top: 2px solid #E87200
+}
+
+#footer a {
+	color: #fff;
+}
+
+@media (max-width: 767px) {
+  #banner > :nth-child(2) h2 {
+ font-size: 18px;
+  }
+}
+
+
+@media (max-width: 575px) {
+  #banner > :nth-child(2) h2 {
+    display: none;
+  }
+	
+	.wp-block-quote {
+		padding: 0 10px;
+		margin: 0 20px;
+	}
+	
+}
+
+.home .ratio ratio-16x9 {
+	max-width: 500px;
+}
+
+ @media (min-width: 992px) {  
+	 .col-lg-6:first-child {
+			padding-right: 38px;
+		}
+	.col-lg-6 iframe {
+    padding: 75px 120px 0 0;
+  }
+	
+}
+
